@@ -1,0 +1,2 @@
+# jQuery-Exercises
+jQuery Exercises

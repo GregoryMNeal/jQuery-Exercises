@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>jQuery Plugin Exercise - Zoom Pic</title>
+
+    <!-- styling -->
+    <style>
+      * { border:0; margin:; padding:0; }
+      p { position:absolute; top:3px; right:28px; color:white; font:bold 13px/1 sans-serif;}
+
+      .zoom {
+        display:inline-block;
+        position:relative;
+      }
+
+      .zoom:after {
+        content:'';
+        display:block;
+        width:33px;
+        height:33px;
+        position:absolute;
+        top:0;
+        right:0;
+        background:url(icon.png)
+      }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src='jquery-zoom.js'></script>
+
+    <script>
+      $(document).ready(function() {
+        $('#ex1').zoom();
+        $('#ex2').zoom({ on:'grab' });
+        $('#ex3').zoom({ on:'click' });
+        $('#ex4').zoom({ on:'toggle' });
+      });
+    </script>
+
+  </head>
+
+  <body>
+    <h1>jQuery Plugin Exercise - Zoom Pic</h1>
+
+    <span class='zoom' id='ex1'>
+      <img src='grandtetonbw.jpg' width='555' height='320' alt='Grand Tetons BW'>
+      <p>Hover</p>
+    </span>
+
+    <span class='zoom' id='ex2'>
+      <img src='grandtetoncolor.jpg' width='555' height='320' alt='Grand Tetons Color'>
+      <p>Grab</p>
+    </span>
+
+    <span class='zoom' id='ex3'>
+      <img src='grandtetonbw.jpg' width='555' height='320' alt='Grand Tetons BW'>
+      <p>Click to activate</p>
+    </span>
+
+    <span class='zoom' id='ex4'>
+      <img src='grandtetoncolor.jpg' width='555' height='320' alt='Grand Tetons Color'>
+      <p>Click to toggle</p>
+    </span>
+
+  </body>
+
+</html>
